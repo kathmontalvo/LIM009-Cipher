@@ -1,1 +1,12 @@
-/* Acá va tu código */
+*{
+    background-color: rgba(50, 60, 77, 0.952);
+    text-align: center;
+    color: white;
+}
+h1{
+    font-style: bold;
+    font-size: 50px;
+}
+input[number]{
+    width: 200px
+}
