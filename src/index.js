@@ -13,7 +13,7 @@ encodeMsg.addEventListener('keyup', () => {
     cipher.encode(a, x, arrDecodeMsg) //función en cipher.js
   }
   console.log(arrDecodeMsg)
-  decodeMsg.innerHTML = arrDecodeMsg[0]
+  decodeMsg.innerHTML = arrDecodeMsg.toString()
 })
 
 

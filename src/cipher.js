@@ -4,7 +4,7 @@ window.cipher = {
   
     if (r > 64 && r < 91){
       const formulaC = String.fromCharCode((r-65+offset)%26+65);
-      console.log(formulaC)
+      
       arr.concat(formulaC)
     }
   },
