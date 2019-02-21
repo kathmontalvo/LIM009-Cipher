@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Ceasar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>¿Listx para hablar en clave? </h1>
-    <form>
-      <label for="">Clave de desplazamiento: 
-      <input type="number" step="1" value="1"name="offsetNumber" id="offsetNumber">
-      </label>
-      <button>Enviar clave</button>
-    </form>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ceasar Cipher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <h1>¿Listx para hablar en clave? </h1> 
+  <form>
+    <label>Clave de desplazamiento:
+      <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber" required>
+    </label> <br>
+  </form>
+  <p>
+      <textarea name="encodeMsg"id="encodeMsg" placeholder="Aquí debes escribir el texto que deseas transformar en clave."></textarea>
+     <span> <button id="btn">Enviar clave</button></span>
+      <textarea name="decodeMsg" id="decodeMsg" placeholder="Aquí debes escribir la clave que tienes y deseas descubrir lo que dice."></textarea>
+  </p>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

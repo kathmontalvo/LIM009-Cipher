@@ -1,8 +1,11 @@
-window.cipher = {
-  encode: () => {
-    /* Acá va tu código */
-  },
-  decode: () => {
-    /* Acá va tu código */
+/*window.cipher = {
+  encode: (offset,string) => {
+    //const vocabulary = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    //vocabulary.charCodeAt(keyUp)
+    
   }
-};
+
+  decode: (offset,string) => {
+  }
+}}
+*/
