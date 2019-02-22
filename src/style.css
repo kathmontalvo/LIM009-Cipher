@@ -1,28 +1,34 @@
 *{
-    background-color: rgba(50, 60, 77, 0.952);
-    text-align: center;
-    color: white;
-    font-size: 25px;
-    line-height: 1.5em;
+  background-color: rgba(50, 60, 77, 0.952);
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  line-height: 1.5em;
 }
 body{
-    margin: 60px;
-    box-align: center;
+  margin: 60px;
+  box-align: center;
 }
 h1{
-    font-style: bold;
-    font-size: 50px;
+  font-style: bold;
+  font-size: 50px;
 }
 input[type="number"]{
-    width: 200px;
-    height: 20px;
-    font-size: 20px;
+  width: 200px;
+  height: 20px;
+  font-size: 20px;
 }
 textarea{
-    height: 200px;
-    width: 250px;
+  height: 200px;
+  width: 250px;
 }
 button{
-    height: 25px;
-    font-size: 20px;
+  height: 25px;
+  font-size: 20px;
+}
+
+
+input[type="text"] {
+  width: 100px,;
+  height: 100px;
 }

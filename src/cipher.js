@@ -1,19 +1,19 @@
 window.cipher = {
- encode: (offset,string, arr) => {
+ encode: (offset,string, arr, inic) => {
     const r= string.charCodeAt();
   
-    if (r > 64 && r < 91){
-      const formulaC = String.fromCharCode((r-65+offset)%26+65);
+    if (r >= inic && r <= inic+25){
+      const formulaC = String.fromCharCode((r-inic+offset)%26+inic);
       arr.push(formulaC)
     }
   },
 
   
-  decode: (offset,string, arr) => {
+  decode: (offset,string, arr, inic) => {
     const d = string.charCodeAt()
     
-    if (d > 64 && d < 91){
-    const formulaD = String.fromCharCode((d+65-offset)%26+65);
+    if (d >= inic && d <=inic+25){
+    const formulaD = String.fromCharCode((d+inic-offset)%26+inic);
     arr.push(formulaD)
 
 
