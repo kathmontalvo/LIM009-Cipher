@@ -9,11 +9,13 @@ window.cipher = {
   },
 
   
-  decode: (offset,string) => {
-    const valord = string.charCodeAt()
-    if (valord > 64 && valord < 91){
-    const formulaD = String.fromCharCode((valord+65-offset)%26+65);
-    decodeMsg.innerHTML+=formulaD
+  decode: (offset,string, arr) => {
+    const d = string.charCodeAt()
+    
+    if (d > 64 && d < 91){
+    const formulaD = String.fromCharCode((d+65-offset)%26+65);
+    arr.push(formulaD)
+
 
     }
   } 
