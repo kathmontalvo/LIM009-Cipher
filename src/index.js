@@ -3,7 +3,7 @@ const decodeMsg = document.getElementById("decodeMsg");
 const desp = document.getElementById("offsetNumber");
 // const btn = document.getElementById("btn");
 
-encodeMsg.addEventListener('keyup', () => {
+encodeMsg.addEventListener('keyup', ()=>{
   const cipherText = encodeMsg.value;
   const arrDecodeMsg = []
 
@@ -12,17 +12,19 @@ encodeMsg.addEventListener('keyup', () => {
     const a = parseInt(desp.value);
     cipher.encode(a, x, arrDecodeMsg) //función en cipher.js
   }
-  console.log(arrDecodeMsg)
-  decodeMsg.innerHTML = arrDecodeMsg.toString()
+  const stringDecode = arrDecodeMsg.toString() // convirtiendo el array a string
+  console.log(stringDecode)
+  const newString = stringDecode.replace (/,/g, "") // quitando las comas del string
+  decodeMsg.innerHTML = newString
 })
 
 
 
-decodeMsg.addEventListener('keyup', () => {
-  const dcipherText = decodeMsg.value;
-  for (i = 0; i < dcipherText.length; i++) {
+decodeMsg.addEventListener('keyup', ()=>{
+    const dcipherText = decodeMsg.value;
+    for (i=0 ; i<dcipherText.length ; i++){
     const y = dcipherText[i];
-    const b = parseInt(desp.value)
-    cipher.decode(b, y)
-  }
+    const b=parseInt(desp.value)
+    cipher.decode(b,y) 
+    }
 })
