@@ -13,10 +13,9 @@ window.cipher = {
     const d = string.charCodeAt()
     
     if (d >= inic && d <=inic+25){
-    const formulaD = String.fromCharCode((d+inic-offset)%26+inic);
+    const formulaD = String.fromCharCode((d+inic-offset)%26+  inic);
     arr.push(formulaD)
 
-
     }
-  } 
+  }  
 }

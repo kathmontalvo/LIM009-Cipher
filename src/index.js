@@ -14,11 +14,7 @@ encodeMsg.addEventListener('keyup', ()=>{
     cipher.encode(a, x, arrDecodeMsg, 97)
   }
   const stringDecode = arrDecodeMsg.toString() // convirtiendo el array a string
-  console.log(stringDecode)
   const newString = stringDecode.replace (/,/g, "") // quitando las comas del string
-  //decodeMsg.value = decodeMsg.defaultValue
-  //decodeMsg.innerHTML = newString;
-  //decodeMsg.innerHTML = stringDecode;
   console.log(newString)
 
   decodeMsg.value = newString;
@@ -40,7 +36,6 @@ decodeMsg.addEventListener('keyup', () => {
   const stringEncode = arrEncodeMsg.toString() // convirtiendo el array a string
   console.log(stringEncode)
   const newStringD = stringEncode.replace (/,/g, "") // quitando las comas del string
-  //encodeMsg.value = encodeMsg.defaultValue
   encodeMsg.value = newStringD
 })
 
