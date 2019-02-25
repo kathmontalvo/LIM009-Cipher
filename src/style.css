@@ -1,28 +1,61 @@
 *{
-  background-color: rgba(50, 60, 77, 0.952);
   text-align: center;
   color: white;
   font-size: 25px;
   line-height: 1.5em;
 }
-body{
-  margin: 60px;
-  box-align: center;
+.all {
+  background-color: rgba(80, 84, 87, 0.555);
+  margin: 50px;
+  align-content: center
 }
-h1{
-  font-style: bold;
+body{
+  background-image: url("bg-black.JPG");
+  font-family: 'Ubuntu', sans-serif;
+  box-sizing: border-box;
+}
+h1{ 
   font-size: 50px;
+  font-family: 'Yeseva One', cursive;
+  padding-top: 30px
+
 }
 input[type="number"]{
   width: 200px;
   height: 20px;
   font-size: 20px;
+  margin-bottom: 40px;
+  color: rgba(59, 58, 59, 0.726);
+  border: 2px solid rgb(145, 142, 142) ;
 }
 textarea{
   height: 200px;
   width: 250px;
+  border: 2px solid rgb(145, 142, 142) ;
+  color: rgb(44, 43, 43);
+  padding: 5px
 }
-button{
-  height: 25px;
+#clear{
+  height: 35px;
+  width: 120px;
   font-size: 20px;
+  border-radius: 28px;
+  background: white;
+  color: rgb(80, 70, 80);
+  margin-bottom: 30px
+}
+#clear:hover {
+  background-color: #008CBA;
+  color: white;
+}
+::placeholder{
+  color: rgba(59, 58, 59, 0.726);
+  font-family: 'Ubuntu', sans-serif;
+  padding: 10px
+}
+img{
+  width: 140px;
+  margin: 5px;
+  height: 180px;
+  text-align:center;
 }
