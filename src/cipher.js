@@ -11,8 +11,8 @@ window.cipher = {
       arr.push(formulaC)
       } else if (r == 32) {
       arr.push(" ")
-      };
-    } ;
+      }
+    } 
   },
 
   decode: (offset, string, arr) => {
@@ -28,6 +28,6 @@ window.cipher = {
       } else if (d == 32) {
         arr.push(" ")
       }
-    };
+    }
   }
 }
