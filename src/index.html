@@ -10,20 +10,20 @@
 
 <body>
   <div class="all">
-  <h1>CAESAR'S CIPHER</h1> 
-  <p>¿Estás listx para hablar en clave?</p>
-  <form>
-    <div>
+    <h1>Emergency cipher</h1>
+    <p>Tu seguridad es la clave. </p>
+    <form>
       <label for="offsetNumber">Clave de desplazamiento:</label>
       <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber" min="0">
-    </div>
-    <div>
-      <textarea name="encodeMsg"id="encodeMsg"  placeholder="Escribe aquí el mensaje que deseas cifrar."></textarea>
-      <img src="arrow.png" alt="Arrow">
-      <textarea name="decodeMsg" id="decodeMsg" placeholder="Escribe aquí el mensaje que seas descifrar."></textarea>
-    </div>
-    <button id="clear">Reset</button>
-  </form>
+      <div>
+        <textarea name="encodeMsg" id="encodeMsg" placeholder="Escribe aquí el mensaje que deseas CIFRAR."></textarea>
+        <img src="arrow.png" alt="Arrow">
+        <textarea name="decodeMsg" id="decodeMsg"
+          placeholder="Escribe aquí el mensaje que deseas DESCIFRAR."></textarea>
+      </div>
+      <button type="reset" id="clear">Reset</button>
+    </form>
+
   </div>
   <script src="cipher.js"></script>
   <script src="index.js"></script>

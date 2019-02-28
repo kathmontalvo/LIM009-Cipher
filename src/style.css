@@ -1,6 +1,6 @@
 *{
   text-align: center;
-  color: white;
+  color: rgb(241, 238, 238);
   font-size: 25px;
   line-height: 1.5em;
 }
@@ -17,7 +17,9 @@ body{
 h1{ 
   font-size: 50px;
   font-family: 'Yeseva One', cursive;
-  padding-top: 30px
+  padding-top: 30px;
+  /* color: rgb(214, 200, 200) */
+  color: rgb(230, 228, 137)
 
 }
 input[type="number"]{
@@ -45,7 +47,7 @@ textarea{
   margin-bottom: 30px
 }
 #clear:hover {
-  background-color: #008CBA;
+  background-color: rgb(131, 165, 177);
   color: white;
 }
 ::placeholder{
