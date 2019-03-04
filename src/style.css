@@ -5,29 +5,28 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 body{
-  background-color: #bbb;
+  background-image: url("handss.jpg");
 }
 header{
   text-align: center;
-  background-color: rgb(29, 29, 43);
   color: white;
   height: calc(100vh - 40px);
   display: none;
-  /* text-shadow: rgb(53, 50, 50) 0.05em 0.05em 0.05em; */
-
 }
  .caja {
   float: left;
-  /* padding: 50px; */
   height: calc(100vh - 40px);
+
 }
 .about{
-  background-color: rgb(175, 171, 171);
+  background-color: rgb(240, 244, 248);
   width: 33%;
   padding-top: 10%;
+  color: black;
+  /* height: auto; */
 }
 .instr{
-  background-color: rgb(204, 204, 204);
+  background-color: rgba(147, 168, 172, 0.39);
   width: 67%;
   padding-top: 1%;
 }
@@ -38,16 +37,16 @@ img{
   height:50%;
   margin: 10%;
 }
- .btn{
+.btn{
   height: 40px;
   font-size: 15px;
   float: left;
   width: 100%;
   padding: 1%;
-  background-color:#878787;
+  background-color: #93A8AC ;
   text-align: center;
   vertical-align: middle;
-  color: white;
+  color: black;
   text-decoration: none;
   cursor: pointer;
  }
@@ -55,10 +54,11 @@ img{
  h1{
   padding: 15px 0px;
   font-size: 45px;
-  background-color:#F5F3F2; 
+  background-color: rgba(255, 255, 255, 0.521);
   font-weight: bold;
   float: left;
   width: 100%;
+  color:black;
  }
 ol{
   width: 98%;
@@ -73,12 +73,17 @@ main{
   margin-left: 10%;
 }
 .copy{
-  float: center;
   color: rgb(80, 70, 80);
   font-size: 20px;
   width: 180px;
   border-radius: 20px;
   background: white ;
+  display: block;
+  margin: 10px 20%;
+}
+.copy:hover {
+  background-color: #E71D36;
+  color: white;
 }
 section{
   text-align: center;
@@ -86,7 +91,9 @@ section{
   height: calc(100vh - 10px);
 }
 .number-one{
-  margin-top: 15px;
+  float: left;
+  width: 100%;
+  padding-top: 1%;
   font-size: 25px;
 }
 #offsetNumber{
@@ -98,6 +105,7 @@ section{
   border: 2px solid rgb(145, 142, 142) ;
   border-radius: 10px;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.521);
 }
 .text-box{
   display: inline-block;
@@ -118,31 +126,22 @@ textarea{
   display: inline-block;
   border-radius: 15px;
   font-size: 22px;
-}
-
-.copy{
-  display: block;
-  margin: 10px 20%;
-}
-.copy:hover {
-  background-color: rgb(185, 187, 214);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.521);
 }
 
 
 .reset{
   float: center;
   height: 35px;
-  width: 120px;
+  width: 140px;
   font-size: 20px;
-  border-radius: 28px;
-  background-color: rgb(131, 165, 177);
+  background-color:#93A8AC;
   color: white;
-  margin: 5%;
+  margin: 1% 0px;
 }
 
 .reset:hover {
-   background: rgb(227, 215, 228);
+   background: rgb(241, 236, 241);
   color: rgb(80, 70, 80);
 }
 ::placeholder{
@@ -157,6 +156,9 @@ textarea{
     width: 100%;
     height: auto;
     padding: 0 ;
+  }
+  body{
+    background-image: url("hands.jpg");
   }
   textarea{
     width: 100%;
@@ -186,7 +188,12 @@ textarea{
     height:180px;
   }
   .instr{
-    padding-top: 7%;
+    padding-top: 5%;
+    line-height:1em;
+    font-size: 1em;
+  }
+  .about{
+    line-height:1em;
   }
 }
 @media screen and (min-width: 1400px){
@@ -196,4 +203,13 @@ textarea{
   textarea{
     height: 230px;
   }
+  .about{
+    padding-top: 15%;
+    font-size: 1.5em;
+  }
+  .instr{
+    padding-top: 8%;
+    font-size: 1.5em;
+  }
 }
+
