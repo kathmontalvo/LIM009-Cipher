@@ -3,28 +3,63 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Ceasar Cipher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Peru News</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu|Yeseva+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+
 </head>
 
 <body>
-  <div class="all">
-    <h1>Emergency cipher</h1>
-    <p>Tu seguridad es la clave. </p>
+  <header id="blockOne" style="display:none">
+    <div  class="caja about">
+      <h2>Sobre nosotros</h2>
+      <p>Nuestra plataforma es una solución rápida y sencilla para enviar textos con clave a una persona de confianza. Si
+          tus mensajes son revisados por alguien más y es vital que no se entere de esto, Emergency Cipher te ayudará.</p> 
+    </div>
+    <div class="caja instr">
+      <h2 >Instrucciones</h2>
+       <ol>
+        <li>CLAVE: 
+          <p> Debes ingresar un número de seguridad, este puede ser positivo o negativo. Servirá como código para poder cifrar o descifrar el mensaje. Solo debe ser compartido entre el usuario y el destinatario del mensaje. </p>
+         </li>
+        <li>CIFRADO: 
+          <p>En el recuadro "cifrar" ingresa el mensaje que deseas encriptar. La respuesta estará en el recuadro "descifrar" y de ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
+        </li>
+        <li>DESCIFRADO:
+          <p>En el recuadro "descifrar" ingresa el mensaje que has recibido. La respuesta cifrada estará en el recuadro "cifrar". De ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
+        </li>
+    </ol>
+    </div>
+  </header>
+  <a href="#" id= "btn" class="btn">MÁS INFORMACIÓN ▼</a>
+  <section id="mainSection" style="display:block">
+    <h1 class= "tituloOf"> EMERGENCY CIPHER </h1>
+
+    <p class="number-one">Tu seguridad es la clave. </p>
+    <p class= "number-two">Ingrésala aquí</p>
     <form>
-      <label for="offsetNumber">Clave de desplazamiento:</label>
-      <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber" min="0">
-      <div>
+      <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber"> <br>
+      <main class="text-box oneb">
+        <label class="text" for="encodeMsg">CIFRAR</label> <br>
         <textarea name="encodeMsg" id="encodeMsg" placeholder="Escribe aquí el mensaje que deseas CIFRAR."></textarea>
-        <img src="arrow.png" alt="Arrow">
+        <button class="copy" id="copyEncode" type="button">Copiar ↑
+        </button>
+      </main>
+      <main class="text-box twob">
+        <label class="text" for="decodeMsg">DESCIFRAR</label><br>
         <textarea name="decodeMsg" id="decodeMsg"
           placeholder="Escribe aquí el mensaje que deseas DESCIFRAR."></textarea>
+        <button class="copy" id="copyDecode" type="button">Copiar ↑
+        </button>
+      </main>
+      <div>
+        <button class="reset" type="reset" id="clear">Reset</button>
       </div>
-      <button type="reset" id="clear">Reset</button>
     </form>
-
-  </div>
+  </section>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
 </body>
