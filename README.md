@@ -6,7 +6,7 @@
 ## Objetivo
 Lograr el cifrado de un mensaje "clave" que se desee emitir y pueda ser entendido únicamente por usuarios de la plataforma y que tengan la clave en común.
 
-###¿Cómo resolvemos el problema de nuestro usuario?
+### ¿Cómo resolvemos el problema de nuestro usuario?
 Ofrecemos una solución efectiva, rápida y sencilla para generar un texto que le permita al usuario comunicarse con otras personas, sin el temor a que alguien más entienda sus conversaciones.
 
 ## Instrucciones
