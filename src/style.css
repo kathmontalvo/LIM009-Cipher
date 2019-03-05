@@ -12,10 +12,12 @@ header{
   color: white;
   height: calc(100vh - 40px);
   display: none;
+  overflow: scroll;
+
 }
  .caja {
   float: left;
-  height: calc(100vh - 40px);
+  height: 100%;
 
 }
 .about{
@@ -23,6 +25,8 @@ header{
   width: 33%;
   padding-top: 10%;
   color: black;
+  height: 100%;
+
 }
 .about h2{
   font-weight: bold;
@@ -57,10 +61,11 @@ img{
   color: black;
   text-decoration: none;
   cursor: pointer;
-  position:relative;
+  position:fixed;
  }
 
  h1{
+  margin-top: 40px;
   padding: 15px 0px;
   font-size: 45px;
   background-color: rgba(255, 255, 255, 0.521);
@@ -257,12 +262,17 @@ textarea{
     height: 230px;
   }
   .about{
-    padding-top: 13%;
-    font-size: 1.5em;
+    padding-top: 4%;
   }
   .instr{
-    padding-top: 6%;
+    padding-top: 3%;
     font-size: 1.2em;
   }
 }
 
+@media screen and (min-width: 2500px){
+  .instr{
+    padding-top: 2%;
+    font-size: 1.2em;
+  }
+}
