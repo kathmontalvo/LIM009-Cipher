@@ -23,15 +23,22 @@ header{
   width: 33%;
   padding-top: 10%;
   color: black;
-  /* height: auto; */
+}
+.about h2{
+  font-weight: bold;
+  font-size: 40px;
+  padding: 10px;
+
 }
 .instr{
   background-color: rgba(147, 168, 172, 0.39);
   width: 67%;
   padding-top: 1%;
 }
-h2{
+.instr h2{
   text-shadow: black 0.1em 0.1em 0.2em;
+  font-size: 40px;
+  padding: 10px;
 }
 img{
   height:50%;
@@ -40,6 +47,7 @@ img{
 .btn{
   height: 40px;
   font-size: 15px;
+  font-weight: bold;
   float: left;
   width: 100%;
   padding: 1%;
@@ -49,6 +57,7 @@ img{
   color: black;
   text-decoration: none;
   cursor: pointer;
+  position:relative;
  }
 
  h1{
@@ -60,18 +69,29 @@ img{
   width: 100%;
   color:black;
  }
-ol{
-  width: 98%;
+.ul{
+  width: 90%;
   text-align: justify;
-  margin: 15px 2%;
+  margin: 15px 5%;
+  font-size: 15px;
+  background-color: rgba(59, 59, 83, 0.527);
+}
+.ref{
+  display: block; 
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #424B54;
+  color: whitesmoke;
+  height: 15%;
+  padding: 5%;
+  margin: 20px  0px;
+  font-size: 20px;
 }
 header p{
   margin: 15px 10px;
   width: 90%;
 }
-main{
-  margin-left: 10%;
-}
+
 .copy{
   color: rgb(80, 70, 80);
   font-size: 20px;
@@ -82,7 +102,7 @@ main{
   margin: 10px 20%;
 }
 .copy:hover {
-  background-color: #E71D36;
+  background-color: #9B6A6C;
   color: white;
 }
 section{
@@ -109,10 +129,10 @@ section{
 }
 .text-box{
   display: inline-block;
-  width:40%;
+  width:35%;
   text-align: justify;
+  margin-left: 10%;
 }
-
 .text{
   font-size: 17px;
 }
@@ -138,12 +158,9 @@ textarea{
   background-color:#93A8AC;
   color: white;
   margin: 1% 0px;
+  cursor: pointer;
 }
 
-.reset:hover {
-   background: rgb(241, 236, 241);
-  color: rgb(80, 70, 80);
-}
 ::placeholder{
   color: rgba(59, 58, 59, 0.726);
   padding: 10px;
@@ -172,9 +189,8 @@ textarea{
   h1{
     font-size: 230%;
     padding:10px 0px;
-
   }
-}
+  }
 
 @media screen and (min-width: 631px) {
    .oneb{
@@ -188,12 +204,49 @@ textarea{
     height:180px;
   }
   .instr{
+    padding-top: 2%;
+    line-height:0.8em;
+    font-size: 0.8em;
+    height: 100%;
+  }
+  .instr h2{
+    height: 15%;
+    font-size:30px;
+    padding: 0px
+  }
+  .about{
+    line-height:0.8em;
+    height: 100%;
+    padding-top: 2%;
+  }
+  .about h2{
+    font-size:30px;
+  }
+  .ref{
+    margin:10px 0px;
+    height:25px;
+    padding-top: 10px;
+  }
+  .ul{
+    width:100%;
+    margin:0px;
+  }
+  header p{
+    margin: 5px 10px;
+  }
+}
+@media screen and (min-width: 1000px){
+  .instr{
     padding-top: 5%;
     line-height:1em;
     font-size: 1em;
   }
   .about{
+    padding: 5% 20px;
     line-height:1em;
+  }
+  .caja{
+    height: calc(100vh - 40px);
   }
 }
 @media screen and (min-width: 1400px){
@@ -204,12 +257,12 @@ textarea{
     height: 230px;
   }
   .about{
-    padding-top: 15%;
+    padding-top: 13%;
     font-size: 1.5em;
   }
   .instr{
-    padding-top: 8%;
-    font-size: 1.5em;
+    padding-top: 6%;
+    font-size: 1.2em;
   }
 }
 

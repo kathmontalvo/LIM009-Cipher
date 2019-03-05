@@ -20,12 +20,12 @@ decodeMsg.addEventListener('keyup', () => {
 copyDecode.addEventListener("click", ()=> {
   decodeMsg.select();
   document.execCommand("copy");
-  alert("Has copiado: " + decodeMsg.value);
+  alert("Clave: "+ desp.value +". Texto copiado: " + decodeMsg.value);
 })
 copyEncode.addEventListener("click", ()=> {
   encodeMsg.select();
   document.execCommand("copy");
-  alert("Has copiado: " + encodeMsg.value);
+  alert("Clave: "+ desp.value +". Texto copiado: " + encodeMsg.value);
 })
 
 
@@ -42,6 +42,29 @@ btn.addEventListener("click", ()=>{
     blockOne.style.display="none";
     btn.innerHTML="MÁS INFORMACIÓN ▼"
     mainSection.style.display="block"
+    instEncode.style.display="none";
+    instDecode.style.display="none"
   }
 })
 
+const cifrarMsg=document.getElementById("cifrarMsg")
+const descifrarMsg=document.getElementById("descifrarMsg")
+const instEncode=document.getElementById("instEncode")
+const instDecode=document.getElementById("instDecode")
+
+cifrarMsg.addEventListener("click", ()=>{
+  if(instEncode.style.display==="none"){
+    instEncode.style.display="block";
+    instDecode.style.display="none"
+  }else{
+    instEncode.style.display="none";
+  }
+})
+
+descifrarMsg.addEventListener("click", ()=>{
+  if(instDecode.style.display==="none"){
+    instDecode.style.display="block";
+    instEncode.style.display="none"
+  }else{
+    instDecode.style.display="none";
+  }})

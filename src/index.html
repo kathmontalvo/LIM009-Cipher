@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Peru News</title>
+  <title>Em-Cipher</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 
@@ -14,47 +14,57 @@
 
 <body>
   <header id="blockOne" style="display:none">
-    <div  class="caja about">
+    <div class="caja about">
       <h2>Sobre nosotros</h2>
-      <p>Nuestra plataforma es una solución rápida y sencilla para enviar textos con clave a una persona de confianza. Si
-          tus mensajes son revisados por alguien más y es vital que no se entere de esto, Emergency Cipher te ayudará.</p> 
+      <p>Si tus conversaciones están siendo revisadas por alguien más o corres el riesgo de que así sea,
+        Emergency Cipher te ayudará. </p>
+      <p> Nuestra plataforma es una solución rápida y sencilla para cifrar textos con clave, la cual será conocida
+        únicamente por el usuario y una persona de su confianza.
+      </p>
     </div>
     <div class="caja instr">
-      <h2 >Instrucciones</h2>
-       <ol>
-        <li>CLAVE: 
-          <p> Debes ingresar un número de seguridad, este puede ser positivo o negativo. Servirá como código para poder cifrar o descifrar el mensaje. Solo debe ser compartido entre el usuario y el destinatario del mensaje. </p>
-         </li>
-        <li>CIFRADO: 
-          <p>En el recuadro "cifrar" ingresa el mensaje que deseas encriptar. La respuesta estará en el recuadro "descifrar" y de ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
-        </li>
-        <li>DESCIFRADO:
-          <p>En el recuadro "descifrar" ingresa el mensaje que has recibido. La respuesta cifrada estará en el recuadro "cifrar". De ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
-        </li>
-    </ol>
+      <h2>Instrucciones</h2>
+      
+      <a href="#" id= "cifrarMsg" class="ref Msg"> SI QUIERES CIFRAR UN MENSAJE </a>
+      <div id="instEncode" class="ul Encode" style="display:none">
+        <p>1. Primero debes ingresar una clave, puede ser cualquier número menor a 130. 
+          Esta va a servir para que el mensaje encriptado solo lo conozcan tú y el destinatario. </p>
+        <p>2. Ingresa un mensaje en la casilla "CIFRADO" para poder encriptar el texto que desees.</p>
+        <p>3. El texto encriptado aparecerá en la casilla "DESCIFRADO".</p>
+        <p>4. Si deseas enviar el mensaje a alguien más, haz click en "COPIAR" debajo del mensaje descifrado.</p>
+        <p>¡No olvides que junto con tu mensaje debes enviar la clave! Solo así podrán descifrar el mensaje que envías.</p>
+      </div>
+
+    <a href="#" id="descifrarMsg" class="ref Msg"> SI QUIERES DESCIFRAR UN MENSAJE... </a>
+    <div id="instDecode" class="ul Decode" style="display:none">
+      <p>1. Primero debes ingresar la clave que has recibido.</p>
+      <p>2. Pega el mensaje en el recuadro "DESCIFRADO"</p>
+      <p>3. En el recuadro "CIFRAR" aparecerá el resultado del mensaje.</p>
+      <p>4. De ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
+    </div>
     </div>
   </header>
-  <a href="#" id= "btn" class="btn">MÁS INFORMACIÓN ▼</a>
+  <a href="#" id="btn" class="btn">MÁS INFORMACIÓN ▼</a>
   <section id="mainSection" style="display:block">
-    <h1 class= "tituloOf"> EMERGENCY CIPHER </h1>
+    <h1 class="tituloOf"> EMERGENCY CIPHER </h1>
 
     <p class="number-one">Tu seguridad es la clave </p>
-    <p class= "number-two">Ingrésala aquí</p>
+    <p class="number-two">Ingrésala aquí</p>
     <form>
-      <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber"> <br>
-      <main class="text-box oneb">
+      <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber" min="-130" max="130"><br>
+      <div class="text-box oneb">
         <label class="text" for="encodeMsg">CIFRAR</label> <br>
         <textarea name="encodeMsg" id="encodeMsg" placeholder="Escribe aquí el mensaje que deseas CIFRAR."></textarea>
         <button class="copy" id="copyEncode" type="button">Copiar ↑
         </button>
-      </main>
-      <main class="text-box twob">
+      </div>
+      <div class="text-box twob">
         <label class="text" for="decodeMsg">DESCIFRAR</label><br>
         <textarea name="decodeMsg" id="decodeMsg"
           placeholder="Escribe aquí el mensaje que deseas DESCIFRAR."></textarea>
         <button class="copy" id="copyDecode" type="button">Copiar ↑
         </button>
-      </main>
+      </div>
       <div>
         <button class="reset" type="reset" id="clear">Reset</button>
       </div>
