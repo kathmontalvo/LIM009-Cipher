@@ -1,33 +1,3 @@
-const encodeMsg = document.getElementById("encodeMsg");
-const decodeMsg = document.getElementById("decodeMsg");
-const desp = document.getElementById("offsetNumber");
-const copyEncode = document.getElementById("copyEncode");
-const copyDecode = document.getElementById("copyDecode");
-
-
-encodeMsg.addEventListener('keyup', () => {
-  const cipherText = encodeMsg.value;
-  const a = parseInt(desp.value);
-  decodeMsg.value = cipher.encode(a, cipherText);
-})
-
-decodeMsg.addEventListener('keyup', () => {
-  const cipherText = decodeMsg.value;
-  const b = parseInt(desp.value)
-  encodeMsg.value = cipher.decode(b, cipherText)
-})
-
-copyDecode.addEventListener("click", ()=> {
-  decodeMsg.select();
-  document.execCommand("copy");
-  alert("Clave: "+ desp.value +". Texto copiado: " + decodeMsg.value);
-})
-copyEncode.addEventListener("click", ()=> {
-  encodeMsg.select();
-  document.execCommand("copy");
-  alert("Clave: "+ desp.value +". Texto copiado: " + encodeMsg.value);
-})
-
 
 const blockOne = document.getElementById("blockOne")
 const btn = document.getElementById("btn")
@@ -68,3 +38,34 @@ descifrarMsg.addEventListener("click", ()=>{
   }else{
     instDecode.style.display="none";
   }})
+  
+const encodeMsg = document.getElementById("encodeMsg");
+const decodeMsg = document.getElementById("decodeMsg");
+const desp = document.getElementById("offsetNumber");
+const copyEncode = document.getElementById("copyEncode");
+const copyDecode = document.getElementById("copyDecode");
+
+
+encodeMsg.addEventListener('keyup', () => {
+  const cipherText = encodeMsg.value;
+  const a = parseInt(desp.value);
+  decodeMsg.value = cipher.encode(a, cipherText);
+})
+
+decodeMsg.addEventListener('keyup', () => {
+  const cipherText = decodeMsg.value;
+  const b = parseInt(desp.value)
+  encodeMsg.value = cipher.decode(b, cipherText)
+})
+
+copyDecode.addEventListener("click", ()=> {
+  decodeMsg.select();
+  document.execCommand("copy");
+  alert("Clave: "+ desp.value +". Texto copiado: " + decodeMsg.value);
+})
+copyEncode.addEventListener("click", ()=> {
+  encodeMsg.select();
+  document.execCommand("copy");
+  alert("Clave: "+ desp.value +". Texto copiado: " + encodeMsg.value);
+})
+
