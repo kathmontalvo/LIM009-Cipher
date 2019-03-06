@@ -48,14 +48,14 @@ const copyDecode = document.getElementById("copy-decode");
 
 encodeMsg.addEventListener('keyup', () => {
   const cipherText = encodeMsg.value;
-  const a = parseInt(desp.value);
-  decodeMsg.value = cipher.encode(a, cipherText);
+  const offset = parseInt(desp.value);
+  decodeMsg.value = cipher.encode(offset, cipherText);
 })
 
 decodeMsg.addEventListener('keyup', () => {
   const cipherText = decodeMsg.value;
-  const b = parseInt(desp.value)
-  encodeMsg.value = cipher.decode(b, cipherText)
+  const offset = parseInt(desp.value)
+  encodeMsg.value = cipher.decode(offset, cipherText)
 })
 
 copyDecode.addEventListener("click", ()=> {

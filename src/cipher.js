@@ -4,28 +4,28 @@ window.cipher = {
 
     for (let i = 0; i < string.length; i++) {
       const x = string[i];
-      const r = x.charCodeAt();
-      if (r >= 65 && r <= 90 && offset >= 0) { // Cifrado para mayúscula con Offset positivo
-        const formulaC = String.fromCharCode((r - 65 + offset) % 26 + 65);
+      const e = x.charCodeAt();
+      if (e >= 65 && e <= 90 && offset >= 0) { // Cifrado para mayúscula con Offset positivo
+        const formulaC = String.fromCharCode((e - 65 + offset) % 26 + 65);
         arr.push(formulaC)
-      } else if (r >= 65 && r <= 90 && offset < 0) { // Cifrado para mayúscula con Offset negativo
-        const formulaC = String.fromCharCode((r + 65 + offset) % 26 + 65);
+      } else if (e >= 65 && e <= 90 && offset < 0) { // Cifrado para mayúscula con Offset negativo
+        const formulaC = String.fromCharCode((e + 65 + offset) % 26 + 65);
         arr.push(formulaC)
-      } else if (r >= 97 && r <= 122 && offset >= 0) { // Cifrado para minúscula con Offset positivo
-        const formulaC = String.fromCharCode((r - 97 + offset) % 26 + 97);
+      } else if (e >= 97 && e <= 122 && offset >= 0) { // Cifrado para minúscula con Offset positivo
+        const formulaC = String.fromCharCode((e - 97 + offset) % 26 + 97);
         arr.push(formulaC)
-      } else if (r >= 97 && r <= 122 && offset < 0) { // Cifrado para minúscula con Offset negativo
-        const formulaC = String.fromCharCode((r + (97 - 65 + 1) + offset) % 26 + 97);
+      } else if (e >= 97 && e <= 122 && offset < 0) { // Cifrado para minúscula con Offset negativo
+        const formulaC = String.fromCharCode((e + (97 - 65 + 1) + offset) % 26 + 97);
         arr.push(formulaC)
-      } else if (r >= 48 && r <= 57 && offset >= 0) { // Cifrado para número con Offset positivo
-        const formulaC = String.fromCharCode((r - 48 + offset) % 10 + 48);
+      } else if (e >= 48 && e <= 57 && offset >= 0) { // Cifrado para número con Offset positivo
+        const formulaC = String.fromCharCode((e - 48 + offset) % 10 + 48);
         arr.push(formulaC)
-      } else if (r >= 48 && r <= 57 && offset < 0) { // Cifrado para número con Offset negativo
-        const formulaC = String.fromCharCode((r + 57 + 5 + offset) % 10 + 48);
+      } else if (e >= 48 && e <= 57 && offset < 0) { // Cifrado para número con Offset negativo
+        const formulaC = String.fromCharCode((e + 57 + 5 + offset) % 10 + 48);
         arr.push(formulaC)
       } else{ // Cifrado para caracteres
-        const abc = String.fromCharCode(r)
-        arr.push(abc)
+        const caract = String.fromCharCode(e)
+        arr.push(caract)
       }
     }
     const stringDecode = arr.join("") // Quitando las comas al array
@@ -56,8 +56,8 @@ window.cipher = {
         const formulaD = String.fromCharCode((d - 48 - offset) % 10 + 48);
         arr.push(formulaD)
       } else { // Descifrado de caractéres
-        const abc = String.fromCharCode(d)
-        arr.push(abc)
+        const caract = String.fromCharCode(d)
+        arr.push(caract)
       }
     }
     const stringDecode = arr.join("") // Quitando las comas del array
