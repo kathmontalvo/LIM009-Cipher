@@ -7,18 +7,16 @@
 body{
   background-image: url("handss.jpg");
 }
-header{
+.about-instr{
   text-align: center;
   color: white;
   height: calc(100vh - 40px);
   display: none;
   overflow: scroll;
-
 }
- .caja {
+ .box {
   float: left;
   height: 100%;
-
 }
 .about{
   background-color: rgb(240, 244, 248);
@@ -26,20 +24,18 @@ header{
   padding-top: 10%;
   color: black;
   height: 100%;
-
 }
-.about h2{
+.about header{
   font-weight: bold;
   font-size: 40px;
   padding: 10px;
-
 }
 .instr{
   background-color: rgba(147, 168, 172, 0.39);
   width: 67%;
   padding-top: 1%;
 }
-.instr h2{
+.instr header{
   text-shadow: black 0.1em 0.1em 0.2em;
   font-size: 40px;
   padding: 10px;
@@ -63,8 +59,7 @@ img{
   cursor: pointer;
   position:fixed;
  }
-
- h1{
+ .main-header{
   margin-top: 40px;
   padding: 15px 0px;
   font-size: 45px;
@@ -81,7 +76,7 @@ img{
   font-size: 15px;
   background-color: rgba(59, 59, 83, 0.527);
 }
-.ref{
+.instr-title{
   display: block; 
   text-decoration: none;
   cursor: pointer;
@@ -92,11 +87,10 @@ img{
   margin: 20px  0px;
   font-size: 20px;
 }
-header p{
+.about-instr p{
   margin: 15px 10px;
   width: 90%;
 }
-
 .copy{
   color: rgb(80, 70, 80);
   font-size: 20px;
@@ -110,10 +104,9 @@ header p{
   background-color: #9B6A6C;
   color: white;
 }
-section{
+.main-section{
   text-align: center;
   color: rgb(18, 18, 19);
-  height: calc(100vh - 10px);
 }
 .number-one{
   float: left;
@@ -141,7 +134,6 @@ section{
 .text{
   font-size: 17px;
 }
-
 textarea{
   width: 80%;
   height: 100px;
@@ -153,10 +145,7 @@ textarea{
   font-size: 22px;
   background-color: rgba(255, 255, 255, 0.521);
 }
-
-
 .reset{
-  float: center;
   height: 35px;
   width: 140px;
   font-size: 20px;
@@ -165,16 +154,14 @@ textarea{
   margin: 1% 0px;
   cursor: pointer;
 }
-
 ::placeholder{
   color: rgba(59, 58, 59, 0.726);
   padding: 10px;
   text-align: justify;
 }
 
-
 @media screen and (min-width: 320px) and (max-width: 630px){
-   .caja{
+   .box{
     width: 100%;
     height: auto;
     padding: 0 ;
@@ -191,7 +178,7 @@ textarea{
     float:left;
     width: 80%;
   } 
-  h1{
+  .main-header{
     font-size: 230%;
     padding:10px 0px;
   }
@@ -214,7 +201,7 @@ textarea{
     font-size: 0.8em;
     height: 100%;
   }
-  .instr h2{
+  .instr header{
     height: 15%;
     font-size:30px;
     padding: 0px
@@ -224,10 +211,10 @@ textarea{
     height: 100%;
     padding-top: 2%;
   }
-  .about h2{
+  .about header{
     font-size:30px;
   }
-  .ref{
+  .instr-title{
     margin:10px 0px;
     height:25px;
     padding-top: 10px;
@@ -236,10 +223,11 @@ textarea{
     width:100%;
     margin:0px;
   }
-  header p{
+  .about-instr p{
     margin: 5px 10px;
   }
 }
+
 @media screen and (min-width: 1000px){
   .instr{
     padding-top: 5%;
@@ -250,10 +238,9 @@ textarea{
     padding: 5% 20px;
     line-height:1em;
   }
-  .caja{
-    height: calc(100vh - 40px);
-  }
+
 }
+
 @media screen and (min-width: 1400px){
   *{
     line-height: 2em;
@@ -261,18 +248,24 @@ textarea{
   textarea{
     height: 230px;
   }
-  .about{
+  .about,.instr{
     padding-top: 4%;
-  }
-  .instr{
-    padding-top: 3%;
     font-size: 1.2em;
+  }
+  .instr-title{
+    margin:20px 0px;
+    height:35px;
+    padding-top: 10px;
+  }
+  .box header{
+    margin-bottom: 40px;
   }
 }
 
 @media screen and (min-width: 2500px){
   .instr{
     padding-top: 2%;
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
+
 }

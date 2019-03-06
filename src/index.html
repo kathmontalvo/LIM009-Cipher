@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Em-Cipher</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -13,21 +12,19 @@
 </head>
 
 <body>
-  <header id="blockOne" style="display:none">
-    <div class="caja about">
-      <h2>Sobre nosotros</h2>
+  <div id="about-instr" class="about-instr" style="display:none">
+    <aside class="box about">
+      <header>Sobre nosotros</header>
       <p> Nuestra plataforma es una solución rápida y sencilla para cifrar textos con clave, la cual será conocida
         únicamente por ti, nuestro usuario y una persona de su confianza. </p>
       <p> ¡AMIGA, HERMANA, MUJER!</p>
       <p>Si tus conversaciones están siendo revisadas por alguien más o corres el riesgo de que así sea,
         Emergency Cipher te ayudará. </p>
-
-    </div>
-    <div class="caja instr">
-      <h2>Instrucciones</h2>
-
-      <a href="#" id="cifrarMsg" class="ref Msg"> SI QUIERES CIFRAR UN MENSAJE </a>
-      <div id="instEncode" class="ul Encode" style="display:none">
+    </aside>
+    <aside class="box instr">
+      <header>Instrucciones</header>
+      <a href="#" id="encode-title" class="instr-title"> SI QUIERES CIFRAR UN MENSAJE </a>
+      <div id="inst-encode" class="ul encode" style="display:none">
         <p>1. Primero debes ingresar una clave, puede ser cualquier número menor a 110.
           Esta va a servir para que el mensaje encriptado solo lo conozcan tú y el destinatario. </p>
         <p>2. Ingresa un mensaje en la casilla "CIFRADO" para poder encriptar el texto que desees.</p>
@@ -36,42 +33,42 @@
         <p>¡No olvides que junto con tu mensaje debes enviar la clave! Solo así podrán descifrarlo.</p>
       </div>
 
-      <a href="#" id="descifrarMsg" class="ref Msg"> SI QUIERES DESCIFRAR UN MENSAJE </a>
-      <div id="instDecode" class="ul Decode" style="display:none">
+      <a href="#" id="decode-title" class="instr-title"> SI QUIERES DESCIFRAR UN MENSAJE </a>
+      <div id="inst-decode" class="ul decode" style="display:none">
         <p>1. Primero debes ingresar la clave que has recibido.</p>
         <p>2. Pega el mensaje en el recuadro "DESCIFRADO"</p>
         <p>3. En el recuadro "CIFRADO" aparecerá el resultado del mensaje.</p>
         <p>4. De ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
       </div>
-    </div>
-  </header>
-  <a href="#" id="btn" class="btn">MÁS INFORMACIÓN ▼</a>
-  <section id="mainSection" style="display:block">
-    <h1 class="tituloOf"> EMERGENCY CIPHER </h1>
-
+    </aside>
+  </div>
+  <nav>
+    <a href="#" id="info-btn" class="btn">MÁS INFORMACIÓN ▼</a>
+  </nav>
+  <main id="main-section" class="main-section" style="display:block">
+    <header class="main-header"> EMERGENCY CIPHER </header>
     <p class="number-one">Tu seguridad es la clave </p>
     <p class="number-two">Ingrésala aquí</p>
-
     <form>
       <input type="number" step="1" value="1" name="offsetNumber" id="offsetNumber" min="-110" max="110"><br>
-      <div class="text-box oneb">
+      <aside class="text-box oneb">
         <label class="text" for="encodeMsg">CIFRADO</label> <br>
         <textarea name="encodeMsg" id="encodeMsg" placeholder="Escribe aquí el mensaje que deseas CIFRAR."></textarea>
         <button class="copy" id="copyEncode" type="button">Copiar ↑
         </button>
-      </div>
-      <div class="text-box twob">
+      </aside>
+      <aside class="text-box twob">
         <label class="text" for="decodeMsg">DESCIFRADO</label><br>
         <textarea name="decodeMsg" id="decodeMsg"
           placeholder="Escribe aquí el mensaje que deseas DESCIFRAR."></textarea>
         <button class="copy" id="copyDecode" type="button">Copiar ↑
         </button>
-      </div>
+      </aside>
       <div>
         <button class="reset" type="reset" id="clear">Reset</button>
       </div>
     </form>
-  </section>
+  </main>
   <script src="cipher.js"></script>
   <script src="index.js"></script>
 </body>

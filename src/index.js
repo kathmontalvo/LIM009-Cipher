@@ -1,15 +1,15 @@
 
-const blockOne = document.getElementById("blockOne")
-const btn = document.getElementById("btn")
-const mainSection = document.getElementById("mainSection");
+const infoSection = document.getElementById("about-instr")
+const btn = document.getElementById("info-btn")
+const mainSection = document.getElementById("main-section");
 
 btn.addEventListener("click", ()=>{
-  if(blockOne.style.display==="none"){
-    blockOne.style.display="block";
+  if(infoSection.style.display==="none"){
+    infoSection.style.display="block";
     btn.innerHTML="CERRAR ▲"
     mainSection.style.display="none"
   }else{
-    blockOne.style.display="none";
+    infoSection.style.display="none";
     btn.innerHTML="MÁS INFORMACIÓN ▼"
     mainSection.style.display="block"
     instEncode.style.display="none";
@@ -17,12 +17,12 @@ btn.addEventListener("click", ()=>{
   }
 })
 
-const cifrarMsg=document.getElementById("cifrarMsg")
-const descifrarMsg=document.getElementById("descifrarMsg")
-const instEncode=document.getElementById("instEncode")
-const instDecode=document.getElementById("instDecode")
+const encodeTitle=document.getElementById("encode-title")
+const decodeTitle=document.getElementById("decode-title")
+const instEncode=document.getElementById("inst-encode")
+const instDecode=document.getElementById("inst-decode")
 
-cifrarMsg.addEventListener("click", ()=>{
+encodeTitle.addEventListener("click", ()=>{
   if(instEncode.style.display==="none"){
     instEncode.style.display="block";
     instDecode.style.display="none"
@@ -31,7 +31,7 @@ cifrarMsg.addEventListener("click", ()=>{
   }
 })
 
-descifrarMsg.addEventListener("click", ()=>{
+decodeTitle.addEventListener("click", ()=>{
   if(instDecode.style.display==="none"){
     instDecode.style.display="block";
     instEncode.style.display="none"
