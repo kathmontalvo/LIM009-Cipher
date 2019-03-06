@@ -39,11 +39,11 @@ decodeTitle.addEventListener("click", ()=>{
     instDecode.style.display="none";
   }})
   
-const encodeMsg = document.getElementById("encodeMsg");
-const decodeMsg = document.getElementById("decodeMsg");
-const desp = document.getElementById("offsetNumber");
-const copyEncode = document.getElementById("copyEncode");
-const copyDecode = document.getElementById("copyDecode");
+const encodeMsg = document.getElementById("encode-msg");
+const decodeMsg = document.getElementById("decode-msg");
+const desp = document.getElementById("offset-number");
+const copyEncode = document.getElementById("copy-encode");
+const copyDecode = document.getElementById("copy-decode");
 
 
 encodeMsg.addEventListener('keyup', () => {
