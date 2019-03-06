@@ -23,13 +23,12 @@ window.cipher = {
       } else if (r >= 48 && r <= 57 && offset < 0) { // Cifrado para número con Offset negativo
         const formulaC = String.fromCharCode((r + 57 + 5 + offset) % 10 + 48);
         arr.push(formulaC)
-      } else/* if (r <= 65 && r >= 32)*/ { // Cifrado para caracteres
+      } else{ // Cifrado para caracteres
         const abc = String.fromCharCode(r)
         arr.push(abc)
       }
     }
-    const abcde = arr.join("") // Quitando las comas al array
-    const stringDecode = abcde.toString() // convirtiendo el array a string
+    const stringDecode = arr.join("") // Quitando las comas al array
     return stringDecode
   },
 
@@ -61,8 +60,7 @@ window.cipher = {
         arr.push(abc)
       }
     }
-    const abcde = arr.join("") // Quitando las comas del array
-    const stringDecode = abcde.toString() // convirtiendo el array a string
+    const stringDecode = arr.join("") // Quitando las comas del array
     return stringDecode
   }
 }
