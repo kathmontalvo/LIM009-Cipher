@@ -2,75 +2,78 @@
 <html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Em-Cipher</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Em-Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet" />
 
 
 </head>
 
 <body>
-  <div id="about-instr" class="about-instr" style="display:none">
-    <aside class="box about">
-      <header>Sobre nosotros</header>
-      <p> Nuestra plataforma es una solución rápida y sencilla para cifrar textos con clave, la cual será conocida
-        únicamente por ti, nuestro usuario y una persona de su confianza. </p>
-      <p> ¡AMIGA, HERMANA, MUJER!</p>
-      <p>Si tus conversaciones están siendo revisadas por alguien más o corres el riesgo de que así sea,
-        Emergency Cipher te ayudará. </p>
-    </aside>
-    <aside class="box instr">
-      <header>Instrucciones</header>
-      <a href="#" id="encode-title" class="instr-title"> SI QUIERES CIFRAR UN MENSAJE </a>
-      <div id="inst-encode" class="ul encode" style="display:none">
-        <p>1. Primero debes ingresar una clave, puede ser cualquier número menor a 110.
-          Esta va a servir para que el mensaje encriptado solo lo conozcan tú y el destinatario. </p>
-        <p>2. Ingresa un mensaje en la casilla "CIFRADO" para poder encriptar el texto que desees.</p>
-        <p>3. El texto encriptado aparecerá en la casilla "DESCIFRADO".</p>
-        <p>4. Si deseas enviar el mensaje a alguien más, haz click en "COPIAR" debajo del mensaje descifrado.</p>
-        <p>¡No olvides que junto con tu mensaje debes enviar la clave! Solo así podrán descifrarlo.</p>
-      </div>
+    <div id="about-instr" class="about-instr hide">
+        <aside class="box about">
+            <header>Sobre nosotros</header>
+            <p> Nuestra plataforma es una solución rápida y sencilla para cifrar textos con clave, la cual será conocida
+                únicamente por ti, nuestro usuario y una persona de su confianza. </p>
+            <p> ¡AMIGA, HERMANA, MUJER!</p>
+            <p>Si tus conversaciones están siendo revisadas por alguien más o corres el riesgo de que así sea, Emergency
+                Cipher te ayudará. </p>
+        </aside>
+        <aside class="box instr font-color">
+            <header>Instrucciones</header>
+            <a href="#" id="encode-title" class="instr-title block font-color"> SI QUIERES CIFRAR UN MENSAJE </a>
+            <div id="inst-encode" class="ul encode hide">
+                <p>1. Primero debes ingresar una clave, puede ser cualquier número de 4 dígitos. Esta va a servir para
+                    que el mensaje encriptado solo lo conozcan tú y el destinatario. </p>
+                <p>2. Ingresa un mensaje en la casilla "CIFRADO" para poder encriptar el texto que desees.</p>
+                <p>3. El texto encriptado aparecerá en la casilla "DESCIFRADO".</p>
+                <p>4. Si deseas enviar el mensaje a alguien más, haz click en "COPIAR" debajo del mensaje descifrado.
+                </p>
+                <p>¡No olvides que junto con tu mensaje debes enviar la clave! Solo así podrán descifrarlo.</p>
+            </div>
 
-      <a href="#" id="decode-title" class="instr-title"> SI QUIERES DESCIFRAR UN MENSAJE </a>
-      <div id="inst-decode" class="ul decode" style="display:none">
-        <p>1. Primero debes ingresar la clave que has recibido.</p>
-        <p>2. Pega el mensaje en el recuadro "DESCIFRADO"</p>
-        <p>3. En el recuadro "CIFRADO" aparecerá el resultado del mensaje.</p>
-        <p>4. De ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
-      </div>
-    </aside>
-  </div>
-  <nav>
-    <a href="#" id="info-btn" class="btn">MÁS INFORMACIÓN ▼</a>
-  </nav>
-  <main id="main-section" class="main-section" style="display:block">
-    <header class="main-header"> EMERGENCY CIPHER </header>
-    <p class="number-one">Tu seguridad es la clave </p>
-    <p class="number-two">Ingrésala aquí</p>
-    <form>
-      <input type="number" step="1" value="1" name="offset-number" id="offset-number" min="-110" max="110"><br>
-      <aside class="text-box oneb">
-        <label class="text" for="encode-msg">CIFRADO</label> <br>
-        <textarea name="encode-msg" id="encode-msg" placeholder="Escribe aquí el mensaje que deseas CIFRAR."></textarea>
-        <button class="copy" id="copy-encode" type="button">Copiar ↑
-        </button>
-      </aside>
-      <aside class="text-box twob">
-        <label class="text" for="decode-msg">DESCIFRADO</label><br>
-        <textarea name="decode-msg" id="decode-msg"
-          placeholder="Escribe aquí el mensaje que deseas DESCIFRAR."></textarea>
-        <button class="copy" id="copy-decode" type="button">Copiar ↑
-        </button>
-      </aside>
-      <div>
-        <button class="reset" type="reset" id="clear">Reset</button>
-      </div>
-    </form>
-  </main>
-  <script src="cipher.js"></script>
-  <script src="index.js"></script>
+            <a href="#" id="decode-title" class="instr-title block font-color"> SI QUIERES DESCIFRAR UN MENSAJE </a>
+            <div id="inst-decode" class="ul decode hide">
+                <p>1. Primero debes ingresar la clave que has recibido.</p>
+                <p>2. Pega el mensaje en el recuadro "DESCIFRADO"</p>
+                <p>3. En el recuadro "CIFRADO" aparecerá el resultado del mensaje.</p>
+                <p>4. De ser conveniente, copia el mensaje al portapapeles para poder enviarlo posteriormente. </p>
+            </div>
+        </aside>
+    </div>
+    <nav>
+        <button id="info-btn" class="btn all-width">MÁS INFORMACIÓN ▼</button>
+    </nav>
+    <main id="main-section" class="main-section">
+        <header class="main-header bg-color all-width"> EMERGENCY CIPHER </header>
+        <p class="number-one all-width">Tu seguridad es la clave </p>
+        <p class="number-two">Ingrésa aquí un número de 4 dígitos</p>
+        <form>
+            <input type="number" step="1" value="1111" class="offset-number bg-color" id="offset-number" min="-9999"
+                max="9999" /><br />
+            <aside class="text-box oneb">
+                <label class="text" for="encode-msg">CIFRADO</label> <br />
+                <textarea class="encode-msg bg-color" id="encode-msg"
+                    placeholder="Escribe aquí el mensaje que deseas CIFRAR."></textarea>
+                <button class="copy block" id="copy-encode" type="button">Copiar ↑
+                </button>
+            </aside>
+            <aside class="text-box twob">
+                <label class="text" for="decode-msg">DESCIFRADO</label><br />
+                <textarea class="decode-msg bg-color" id="decode-msg"
+                    placeholder="Escribe aquí el mensaje que deseas DESCIFRAR."></textarea>
+                <button class="copy block" id="copy-decode" type="button">Copiar ↑
+                </button>
+            </aside>
+            <div>
+                <button class="reset all-width font-color" type="reset" id="clear">Reset</button>
+            </div>
+        </form>
+    </main>
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
 </body>
 
-</html>
+</html>|

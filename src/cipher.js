@@ -1,66 +1,72 @@
 window.cipher = {
-  encode: (offset, string) => {
-    const arr = []
+    encode: (offset, string) => {
+        const cipherText = []
 
-    for (let i = 0; i < string.length; i++) {
-      const x = string[i];
-      const e = x.charCodeAt();
-      if (e >= 65 && e <= 90 && offset >= 0) { // Cifrado para mayúscula con Offset positivo
-        const formulaC = String.fromCharCode((e - 65 + offset) % 26 + 65);
-        arr.push(formulaC)
-      } else if (e >= 65 && e <= 90 && offset < 0) { // Cifrado para mayúscula con Offset negativo
-        const formulaC = String.fromCharCode((e + 65 + offset) % 26 + 65);
-        arr.push(formulaC)
-      } else if (e >= 97 && e <= 122 && offset >= 0) { // Cifrado para minúscula con Offset positivo
-        const formulaC = String.fromCharCode((e - 97 + offset) % 26 + 97);
-        arr.push(formulaC)
-      } else if (e >= 97 && e <= 122 && offset < 0) { // Cifrado para minúscula con Offset negativo
-        const formulaC = String.fromCharCode((e + (97 - 65 + 1) + offset) % 26 + 97);
-        arr.push(formulaC)
-      } else if (e >= 48 && e <= 57 && offset >= 0) { // Cifrado para número con Offset positivo
-        const formulaC = String.fromCharCode((e - 48 + offset) % 10 + 48);
-        arr.push(formulaC)
-      } else if (e >= 48 && e <= 57 && offset < 0) { // Cifrado para número con Offset negativo
-        const formulaC = String.fromCharCode((e + 57 + 5 + offset) % 10 + 48);
-        arr.push(formulaC)
-      } else{ // Cifrado para caracteres
-        const caract = String.fromCharCode(e)
-        arr.push(caract)
-      }
-    }
-    const stringDecode = arr.join("") // Quitando las comas al array
-    return stringDecode
-  },
+        for (let i = 0; i < string.length; i++) {
+            const letter = string[i];
+            const asciiLetter = letter.charCodeAt();
+            if (asciiLetter >= 65 && asciiLetter <= 90 && offset >= 0) { // Cifrado para mayúscula con Offset positivo
+                const encodedLetter = String.fromCharCode((asciiLetter - 65 + offset) % 26 + 65);
+                cipherText.push(encodedLetter)
+            } else if (asciiLetter >= 65 && asciiLetter <= 90 && offset < 0) { // Cifrado para mayúscula con Offset negativo
+                const n = 385
+                const encodedLetter = String.fromCharCode((asciiLetter + 65 * n + offset) % 26 + 65);
+                cipherText.push(encodedLetter)
+            } else if (asciiLetter >= 97 && asciiLetter <= 122 && offset >= 0) { // Cifrado para minúscula con Offset positivo
+                const encodedLetter = String.fromCharCode((asciiLetter - 97 + offset) % 26 + 97);
+                cipherText.push(encodedLetter)
+            } else if (asciiLetter >= 97 && asciiLetter <= 122 && offset < 0) { // Cifrado para minúscula con Offset negativo
+                const n = 385
+                const encodedLetter = String.fromCharCode((asciiLetter + (26 * n + 7) - offset) % 26 + 97);
+                cipherText.push(encodedLetter)
+            } else if (asciiLetter >= 32 && asciiLetter <= 64 && offset >= 0) { // Cifrado para caracteres con Offset positivo
+                const encodedLetter = String.fromCharCode((asciiLetter - 32 + offset) % 33 + 32);
+                cipherText.push(encodedLetter)
+            } else if (asciiLetter >= 32 && asciiLetter <= 64 && offset < 0) { // Cifrado para caracteres con Offset negativo
+                let n = 303
+                const encodedLetter = String.fromCharCode((asciiLetter + 32 * n + n + 1 + offset) % 33 + 32);
+                cipherText.push(encodedLetter)
+            } else { // Cifrado para otros caracteres
+                const otherCarac = String.fromCharCode(asciiLetter)
+                cipherText.push(otherCarac)
+            }
+        }
+        const stringEncode = cipherText.join("") // Quitando las comas del cipherText
+        return stringEncode
+    },
 
-  decode: (offset, string) => {
-    const arr = []
-    for (let i = 0; i < string.length; i++) {
-      const y = string[i];
-      const d = y.charCodeAt()
-      if (d >= 65 && d <= 65 + 25 && offset >= 0) { // Descifrado para mayúsculas con offset positivo
-        const formulaD = String.fromCharCode((d + 65 - offset) % 26 + 65);
-        arr.push(formulaD)
-      } else if (d >= 65 && d <= 65 + 25 && offset < 0) { // Descifrado para mayúsculas con offset positivo
-        const formulaD = String.fromCharCode((d - 65 - offset) % 26 + 65);
-        arr.push(formulaD)
-      } else if (d >= 97 && d <= 97 + 25 && offset >= 0) {  // Descifrado para minúscula con offset positivo
-        const formulaE = String.fromCharCode((d + (97 - 65 + 1) - offset) % 26 + 97);
-        arr.push(formulaE)
-      } else if (d >= 97 && d <= 97 + 25 && offset < 0) {  // Descifrado para minúscula con offset negativo
-        const formulaE = String.fromCharCode((d - 97 - offset) % 26 + 97);
-        arr.push(formulaE)
-      } else if (d >= 48 && d <= 57 && offset >= 0) { // Descifrado para números con offset positivo
-        const formulaD = String.fromCharCode((d + 57 + 5 - offset) % 10 + 48);
-        arr.push(formulaD)
-      } else if (d >= 48 && d <= 57 && offset < 0) { // Descifrado para números con offset negativo
-        const formulaD = String.fromCharCode((d - 48 - offset) % 10 + 48);
-        arr.push(formulaD)
-      } else { // Descifrado de caractéres
-        const caract = String.fromCharCode(d)
-        arr.push(caract)
-      }
+    decode: (offset, string) => {
+        const cipherText = []
+        for (let i = 0; i < string.length; i++) {
+            const y = string[i];
+            const d = y.charCodeAt()
+            if (d >= 65 && d <= 65 + 25 && offset >= 0) { // Descifrado para mayúsculas con offset positivo
+                const n = 385
+                const decodedLetter = String.fromCharCode((d + 65 * n - offset) % 26 + 65);
+                cipherText.push(decodedLetter)
+            } else if (d >= 65 && d <= 65 + 25 && offset < 0) { // Descifrado para mayúsculas con offset negativo
+                const decodedLetter = String.fromCharCode((d - 65 - offset) % 26 + 65);
+                cipherText.push(decodedLetter)
+            } else if (d >= 97 && d <= 122 && offset >= 0) { // Descifrado para minúscula con offset positivo
+                const n = 385
+                const decodedLetter = String.fromCharCode((d + 26 * n + 7 - offset) % 26 + 97);
+                cipherText.push(decodedLetter)
+            } else if (d >= 97 && d <= 122 && offset < 0) { // Descifrado para minúscula con offset negativo
+                const decodedLetter = String.fromCharCode((d - 97 - offset) % 26 + 97);
+                cipherText.push(decodedLetter)
+            } else if (d >= 32 && d <= 64 && offset >= 0) { // Cifrado para caracteres con Offset positivo
+                const n = 303
+                const decodedLetter = String.fromCharCode((d + 32 * n + n + 1 - offset) % 33 + 32);
+                cipherText.push(decodedLetter)
+            } else if (d >= 32 && d <= 64 && offset < 0) { // Cifrado para caracteres con Offset negativo
+                const decodedLetter = String.fromCharCode((d - 32 - offset) % 33 + 32);
+                cipherText.push(decodedLetter)
+            } else { // Descifrado de otros caracteres
+                const otherCaract = String.fromCharCode(d)
+                cipherText.push(otherCaract)
+            }
+        }
+        const stringDecode = cipherText.join("") // Quitando las comas del cipherText
+        return stringDecode
     }
-    const stringDecode = arr.join("") // Quitando las comas del array
-    return stringDecode
-  }
 }
